@@ -3,5 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+	<bean id="userService" class="in.indigenous.users.service.impl.UserServiceImpl"></bean>
+	<bean id="autoCompleteController" class="in.indigenous.autocomplete.controllers.AutoCompleteController">
+		<property name="userService" ref="userService"></property>
+	</bean>
 </beans>
